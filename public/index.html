@@ -4,17 +4,34 @@
     <title>Hackazon</title>
   </head>
   <body>
-    <div id="app">
-    </div>
+    <div id="itemDetails"></div>
     <hr />
+    <div id="relatedProduct"></div>
+    <div id="productComparison"></div>
+    <div id="reviewSection"></div>
     <script src="lib/react.development.js"></script>
     <script src="lib/react-dom.development.js"></script>
+    <script src="http://localhost:8001/bundle.js"></script>
+    <script src="http://localhost:8002/product/:id/bundle.js"></script>
+    <script src="http://localhost:8003/product/:id/bundle.js"></script>
     <script src="http://localhost:8004/bundle.js"></script>
     <script>
-     ReactDOM.render(
+      ReactDOM.render(
        React.createElement(ItemDetails),
-       document.getElementById('app')
-     );
+       document.getElementById('itemDetails')
+      );
+      ReactDOM.render(
+        React.createElement(RelatedProduct),
+        document.getElementById('relatedProduct')
+      );
+      ReactDOM.render(
+        React.createElement(App),
+        document.getElementById('productComparison')
+      );
+      ReactDOM.render(
+        React.createElement(ReviewSection),
+        document.getElementById('reviewSection')
+      );
    </script>
   </body>
 </html>
