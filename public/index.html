@@ -11,27 +11,27 @@
     <div id="reviewSection"></div>
     <script src="lib/react.development.js"></script>
     <script src="lib/react-dom.development.js"></script>
-    <!-- <script src="/ms/relatedProduct"></script> -->
-    <script src="/ms/productComparison"></script>
-    <script src="/ms/reviewSection"></script>
-    <!-- <script src="/ms/itemDetails"></script> -->
+    <script src="/ms/relatedProduct"></script>
+    <!-- <script src="/ms/productComparison"></script>
+    <script src="/ms/reviewSection"></script> -->
+    <script src="/ms/itemDetails"></script>
     <script>
-      // ReactDOM.render(
-      //  React.createElement(ItemDetails),
-      //  document.getElementById('itemDetails')
-      // );
-      // ReactDOM.render(
-      //   React.createElement(RelatedProduct),
-      //   document.getElementById('relatedProduct')
-      // );
       ReactDOM.render(
-        React.createElement(App),
-        document.getElementById('productComparison')
+       React.createElement(ItemDetails),
+       document.getElementById('itemDetails')
       );
       ReactDOM.render(
-        React.createElement(ReviewSection),
-        document.getElementById('reviewSection')
+        React.createElement(RelatedProduct),
+        document.getElementById('relatedProduct')
       );
+      // ReactDOM.render(
+      //   React.createElement(productComparison),
+      //   document.getElementById('productComparison')
+      // );
+      // ReactDOM.render(
+      //   React.createElement(ReviewSection),
+      //   document.getElementById('reviewSection')
+      // );
    </script>
   </body>
 </html>
