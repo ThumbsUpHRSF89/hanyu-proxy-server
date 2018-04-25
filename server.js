@@ -10,18 +10,18 @@ app.use('/product/:id/', express.static(path.join(__dirname, './public')));
 app.get('/ms/:serviceName', (req, res) => {
   const { serviceName } = req.params;
   const ports = {
-    relatedProduct: 8001,
-    reviewSection: 8002,
-    productComparison: 8003,
+    // relatedProduct: 8001,
+    // reviewSection: 8002,
+    // productComparison: 8003,
     itemDetails: 8004,
   }
-  const routes = {
-    itemDetails: 'item_detail',
-    relatedProduct: 'related_product',
-  }
+  // const routes = {
+  //   itemDetails: 'item_detail',
+  //   relatedProduct: 'related_product',
+  // }
   const url = routes[serviceName];
 
-  request(`http://${url}:${ports[serviceName]}/bundle.js`)
+  request(`http://localhost:${ports[serviceName]}/bundle.js`)
     .then(body => res.send(body))
     .catch((e) => {
       res.sendStatus(500);
